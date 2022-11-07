@@ -1,87 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Clipboard landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      font-size: 18px;
+      font-family: 'Bai Jamjuree', Arial, Helvetica, sans-serif;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      width: 100%;
+    }
+
+    .header {
+      box-sizing: border-box;
+    }
+
+    p,
+    article {
+      color: hsl(171, 66%, 44%);
+      font-size: 0.85rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-top: 50px;
+    }
+
+    .header-text h1 {
+      text-align: center;
+    }
+
+    .header-text article {
+      text-align: center;
+      line-height: 24px;
+      margin-bottom: 50px;
+    }
+
+    .header .svg-image {
+      margin-top: 110px;
+    }
+
+    .header-text .ios-download {
+      background-color: hsl(171, 66%, 44%);
+      border-radius: 50px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 1px 3px 1px hsl(171, 66%, 40%);
+      margin-bottom: 30px;
+      transition: all 0.1s ease-in-out;
+    }
+
+    .header-text .ios-download:hover {
+      transform: scale(1.05);
+    }
+
+    .header-text .mac-download {
+      background-color: hsl(233, 100%, 69%);
+      border-radius: 50px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 1px 3px 1px hsl(233, 100%, 55%);
+      margin-bottom: 30px;
+      transition: all 0.1s ease-in-out;
+    }
+
+    .header-text .mac-download:hover {
+      transform: scale(1.05);
+    }
+
+    .header-text a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-weight: 600;
+      color: hsl(210, 10%, 33%);
+    }
+
+    .track-section {
+      margin-top: 100px;
+    }
+
+    .track-section h2,
+    .track-section p,
+    .track-section h3 {
+      text-align: center;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @media only screen and (max-width:375px) {
+      header {
+        background-image: url(images/bg-header-mobile.png);
+        background-size: contain;
+        width: 100%;
+        background-repeat: no-repeat;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+
+      .track-content h3 {
+        margin-top: 40px;
+      }
+
+      .track-section img {
+        width: 100%;
+      }
+
+      .track-section {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+    }
   </style>
 </head>
+
 <body>
+  <header>
+    <div class="header">
+      <p class="svg-image">
+        <svg width="125" height="125" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#26BBA4" stroke-width="10" fill="none" fill-rule="evenodd">
+            <circle cx="62.5" cy="62.5" r="57.5" />
+            <path d="M85.481 85.481c-12.692 12.692-33.27 12.692-45.962 0s-12.692-33.27 0-45.962 33.27-12.692 45.962 0"
+              stroke-linecap="round" />
+          </g>
+        </svg>
+      </p>
 
-  A history of everything you copy
+      <div class="header-text">
+        <h1>A history of everything you copy</h1>
 
-  Clipboard allows you to track and organize everything you 
-  copy. Instantly access your clipboard on all your devices.
+        <article>
+          Clipboard allows you to track and organize everything you
+          copy. Instantly access your clipboard on all your devices.
+        </article>
 
-  Download for iOS
-  Download for Mac
+        <p class="ios-download"><a href="#">Download for iOS</a></p>
+        <p class="mac-download"><a href="#">Download for Mac</a></p>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="track-section">
+      <div class="track-header">
+        <h2>Keep track of your snippets</h2>
+        <p>
+          Clipboard instantly stores any item you copy in the cloud,
+          meaning you can access your snippets immediately on all your
+          devices. Our Mac and iOS apps will help you organize everything.
+        </p>
+      </div>
+      <img src="images/image-computer.png" alt="Computer image">
+      <div class="track-content">
+        <h3>Quick Search</h3>
 
-  Keep track of your snippets
+        <p>Easily search your snippets by content, category, web address, application, and more.</p>
 
-  Clipboard instantly stores any item you copy in the cloud, 
-  meaning you can access your snippets immediately on all your 
-  devices. Our Mac and iOS apps will help you organize everything.
+        <h3>iCloud Sync</h3>
 
-  Quick Search
+        <p>Instantly saves and syncs snippets across all your devices.</p>
 
-  Easily search your snippets by content, category, web address, application, and more.
+        <h3>Complete History</h3>
 
-  iCloud Sync
+        <p>Retrieve any snippets from the first moment you started using the app.</p>
+      </div>
+    </section>
 
-  Instantly saves and syncs snippets across all your devices.
+    <h2>Access Clipboard anywhere</h2>
 
-  Complete History
+    <p>
+      Whether you’re on the go, or at your computer, you can access all your Clipboard
+      snippets in a few simple clicks.
+    </p>
 
-  Retrieve any snippets from the first moment you started using the app.
+    <h2>Supercharge your workflow</h2>
 
-  Access Clipboard anywhere
+    <p>We’ve got the tools to boost your productivity.</p>
 
-  Whether you’re on the go, or at your computer, you can access all your Clipboard 
-  snippets in a few simple clicks.
+    <h3>Create blacklists</h3>
 
-  Supercharge your workflow
+    <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
 
-  We’ve got the tools to boost your productivity.
+    <h3>Plain text snippets</h3>
 
-  Create blacklists
+    <p>Remove unwanted formatting from copied text for a consistent look.</p>
 
-  Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
+    <h3>Sneak preview</h3>
 
-  Plain text snippets
+    <p>Quick preview of all snippets on your Clipboard for easy access.</p>
 
-  Remove unwanted formatting from copied text for a consistent look.
+    <div class="logos-box">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+    </div>
 
-  Sneak preview
+    <h2>Clipboard for iOS and Mac OS</h2>
 
-  Quick preview of all snippets on your Clipboard for easy access.
+    <p>
+      Available for free on the App Store. Download for Mac or iOS, sync with iCloud
+      and you’re ready to start adding to your clipboard.
+    </p>
 
-  Clipboard for iOS and Mac OS
+    <p><a href="">Download for iOS</a></p>
+    <p><a href="">Download for Mac</a></p>
 
-  Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
-  and you’re ready to start adding to your clipboard.
-
-  Download for iOS
-  Download for Mac
-
+  </main>
   FAQs
   Contact Us
   Privacy Policy
   Press Kit
   Install Guide
-  
+
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Bartlomiej Dabrowski</a>.
     </p>
   </footer>
 </body>
+
 </html>
