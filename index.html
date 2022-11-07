@@ -98,8 +98,11 @@
       color: hsl(210, 10%, 33%);
     }
 
-    .track-section {
-      margin-top: 100px;
+    .track-section, .clipboard-section, .supercharge-section  {
+      margin-top: 150px;
+    }
+    .clipboard-section, .clipboard-content, .supercharge-section {
+      text-align: center;
     }
 
     .track-section h2,
@@ -117,6 +120,9 @@
 
     .attribution a {
       color: hsl(228, 45%, 44%);
+    }
+    .line  {
+      line-height: 24px;
     }
 
     @media only screen and (max-width:375px) {
@@ -142,8 +148,19 @@
       .track-section img {
         width: 100%;
       }
+      .clipboard-section img {
+        width: 100%;
+      }
 
       .track-section {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+      .clipboard-section {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+      .supercharge-section {
         margin-left: 24px;
         margin-right: 24px;
       }
@@ -164,7 +181,7 @@
         </svg>
       </p>
 
-      <div class="header-text">
+      <div class="header-text line">
         <h1>A history of everything you copy</h1>
 
         <article>
@@ -179,7 +196,7 @@
   </header>
   <main>
     <section class="track-section">
-      <div class="track-header">
+      <div class="track-header line">
         <h2>Keep track of your snippets</h2>
         <p>
           Clipboard instantly stores any item you copy in the cloud,
@@ -188,7 +205,7 @@
         </p>
       </div>
       <img src="images/image-computer.png" alt="Computer image">
-      <div class="track-content">
+      <div class="track-content line">
         <h3>Quick Search</h3>
 
         <p>Easily search your snippets by content, category, web address, application, and more.</p>
@@ -203,28 +220,38 @@
       </div>
     </section>
 
-    <h2>Access Clipboard anywhere</h2>
+    <section class="clipboard-section">
+      <div class="clipboard-content line">
+        <h2>Access Clipboard anywhere</h2>
+        <p>
+          Whether you’re on the go, or at your computer, you can access all your Clipboard
+          snippets in a few simple clicks.
+        </p>
+      </div>
+      <img src="images/image-devices.png" alt="">
+    </section>
 
-    <p>
-      Whether you’re on the go, or at your computer, you can access all your Clipboard
-      snippets in a few simple clicks.
-    </p>
+    <section class="info-section">
+      <div class="supercharge-section">
+        <h2>Supercharge your workflow</h2>
+        <p>We’ve got the tools to boost your productivity.</p>
+      </div>
+      <div class="info-list">
+        <h3>Create blacklists</h3>
+        <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+      </div>
+  
+      <div class="info-list">
+        <h3>Plain text snippets</h3>
+        <p>Remove unwanted formatting from copied text for a consistent look.</p>
+      </div>
+  
+      <div class="info-list">
+        <h3>Sneak preview</h3>
+        <p>Quick preview of all snippets on your Clipboard for easy access.</p>
+      </div>
 
-    <h2>Supercharge your workflow</h2>
-
-    <p>We’ve got the tools to boost your productivity.</p>
-
-    <h3>Create blacklists</h3>
-
-    <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
-
-    <h3>Plain text snippets</h3>
-
-    <p>Remove unwanted formatting from copied text for a consistent look.</p>
-
-    <h3>Sneak preview</h3>
-
-    <p>Quick preview of all snippets on your Clipboard for easy access.</p>
+    </section>
 
     <div class="logos-box">
       <img src="" alt="">
